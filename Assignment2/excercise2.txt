@@ -1,0 +1,34 @@
+HW2-Excerise2: List main differences between primitive data type int and class Integer. Be as specific as possible. What are advantages of using each one? List all specific functionalities that are available when using one and not the other. Consult Java API as a resource to find out this information. Save your answer to a text file named exercise2.txt.
+
+Answer:
+The main differences between primitive data type int and class Integer take places in type, purpose, flexibility, casting, direct conversion to other base as following:
+
+Type: int is a primitive data type that stores data by bit and it is high performance, rather than wrapper class Integer, for calculating number in a range of [-2^31] as a sake of performance, int is a 32-bit chunk of information, int variables is mutable(That means we can change their value any time, unless we mark it "final". Whereas Integer is wrapper class that wraps single primitive data type int inside it (like a box contain an int), it is immutable(that means we only can change the value of a Integer variable, we have to create a new Integer and discard the old one. 
+
+Purpose: an int is used for storing integer into the memory, whereas Integer is used for converting int into object and to convert an object into int(it is converting easy by single line of code). 
+
+Flexibility: In comparison, an int is less flexibility as wrapper class Integer because an int only allows binary value of an integer, whereas class Integer can be used in collections with Object reference or generics because wrapper class inherits object class.
+
+Casting: we cannot assign a string to an int directly or even by casting, however we can assign string to an object of Integer type using the Integer(String) constructor or usinh parseInt(String) to convert a String literal to an int value.
+
+Direct conversion to other base: We cannot convert integer value to other base as an int. However, we can directly convert its integer value to other bases such as Binary, Octal or Hexadecimal format as an Integer.
+
+Advantages of an int:
+> Int is use less memory footprint. 
+> Useful when normal mathematical operations are required because it is a value type, so it's stored in the Stack area of the memory, hence operations on it are much faster. An int can pass it as parameter and return it as a value. 
+
+Advantages of an Integer:
+an Integer is taking more memory footprint, and it is stored on heap memory, therefor its operations is lower. However, an Integer has far more advantages than an int as following:
+
+> An int can pass it as parameter and return it as a value. 
+> Use methods on it from java.lang.Integer.
+> Store it in a Vector or other Collection	
+> Use it as a HashMap key	
+> serialize it	
+> send it by itself over RMI (Remote Method Invocation)
+> pass it as a generic object to a TableCellRenderer. You may pass a variety of different types via the same parameter.	
+> Allow for a null value that means there is no value.	
+
+
+
+
